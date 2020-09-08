@@ -21,8 +21,8 @@ Age < Min Age
 Age > Max Age  
 Property Value < 0  
 Mortgage Amount < 0  
-Invalid Property Value - non-int values  
-Invalid Mortgage Amount - non-int values 
+Invalid Property Value - non-int values    
+Invalid Mortgage Amount - non-int values  
 mortgageAmount / propertyValue < loanToValue  
 
 UI
