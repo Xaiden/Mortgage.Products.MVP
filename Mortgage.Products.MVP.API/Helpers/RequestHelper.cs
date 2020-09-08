@@ -1,9 +1,9 @@
-﻿using Mortgage_Products_MVP.Models;
+﻿using Mortgage.Products.MVP.API.Models;
 using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using Xunit.Abstractions;
 
-namespace Mortgage_Products_MVP.Helpers
+namespace Mortgage.Products.MVP.API.Helpers
 {
     public static class RequestHelper
     {

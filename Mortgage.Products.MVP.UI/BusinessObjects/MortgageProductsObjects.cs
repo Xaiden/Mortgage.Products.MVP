@@ -1,9 +1,9 @@
-﻿using Mortgage_Products_UI.Models;
+﻿using Mortgage.Products.MVP.UI.Models;
 using OpenQA.Selenium;
 using System.Collections.Generic;
 using TechTalk.SpecFlow;
 
-namespace Mortgage_Products_UI.BusinessObjects
+namespace Mortgage.Products.MVP.UI.BusinessObjects
 {
     public class MortgageProductsObjects
     {

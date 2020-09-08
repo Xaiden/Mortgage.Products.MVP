@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Mortgage_Products_UI.Models
+﻿namespace Mortgage.Products.MVP.UI.Models
 {
     public class MortgageProduct
     {

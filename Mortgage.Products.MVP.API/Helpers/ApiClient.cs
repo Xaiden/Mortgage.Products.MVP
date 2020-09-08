@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit.Abstractions;
 
-namespace Mortgage_Products_MVP
+namespace Mortgage.Products.MVP.API
 {
     public class ApiClient
     {

@@ -1,9 +1,9 @@
-﻿using Mortgage_Products_MVP.Models;
+﻿using Mortgage.Products.MVP.API.Models;
 using System.Linq;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
-namespace Mortgage_Products_MVP.Hooks
+namespace Mortgage.Products.MVP.Hooks
 {
     [Binding]
     public class MortgageProductApplicationTransformations

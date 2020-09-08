@@ -1,4 +1,4 @@
-﻿//using Mortgage_Products_MVP.Models;
+﻿//using Mortgage.Products.MVP.API.Models;
 //using Newtonsoft.Json;
 //using System;
 //using System.Net.Http;
@@ -6,7 +6,7 @@
 //using System.Text;
 //using System.Threading.Tasks;
 
-//namespace Mortgage_Products_MVP
+//namespace Mortgage.Products.MVP.API
 //{
 //    /// <summary>
 //    /// Class which implements all HTTP operations: GET, POST - for this exercise

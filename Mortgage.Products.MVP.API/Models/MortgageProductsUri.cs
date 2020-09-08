@@ -2,7 +2,7 @@
 //using System.Collections.Generic;
 //using System.Text;
 
-//namespace Mortgage_Products_MVP
+//namespace Mortgage.Products.MVP.API
 //{
 //    public class MortgageProductsUri : Uri
 //    {

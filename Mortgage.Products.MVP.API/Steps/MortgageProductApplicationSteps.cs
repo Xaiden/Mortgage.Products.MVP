@@ -1,12 +1,12 @@
 ﻿using FluentAssertions;
-using Mortgage_Products_MVP.Helpers;
-using Mortgage_Products_MVP.Models;
+using Mortgage.Products.MVP.API.Helpers;
+using Mortgage.Products.MVP.API.Models;
 using Newtonsoft.Json.Linq;
 using System.Net;
 using TechTalk.SpecFlow;
 using Xunit.Abstractions;
 
-namespace Mortgage_Products_MVP.StepDefinitions
+namespace Mortgage.Products.MVP.API.StepDefinitions
 {
     [Binding]
     public class MortgageProductApplicationSteps
@@ -55,7 +55,6 @@ namespace Mortgage_Products_MVP.StepDefinitions
                 responseContent.ToObject<MortgageApplicationResponse>();
 
             mortgageApplicationResponse.Decision.Should().BeEquivalentTo(decision);
-
         }
 
 
@@ -64,22 +63,10 @@ namespace Mortgage_Products_MVP.StepDefinitions
         {
             JObject responseContent = JObject.Parse(_scenarioData.ApiResponse.Content.ToString());
 
-            //string test = "{\"status\":\"error\",\"decision\":\"rejected\",\"reason\":[{\"field\":\"age\",\"message\":\"Invalid age for product\"}]}";
-            //JObject responseContent = JObject.Parse(test);
-
-
-            //MortgageApplicationResponse mortgageApplicationResponse = responseContent.ToObject<MortgageApplicationResponse>();
-
-            //foreach (var error in responseContent["reason"])
-            //{
-
-            //}
-
             MortgageApplicationResponseReasons[] mortgageApplicationResponseReasons = 
                 responseContent.ToObject<MortgageApplicationResponse>().Reasons;
 
             mortgageApplicationResponseReasons.Should().BeEquivalentTo(expectedErrorMessages);
         }
-
     }
 }

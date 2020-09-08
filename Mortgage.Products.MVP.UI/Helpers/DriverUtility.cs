@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Mortgage_Products_UI.SeleniumHelpers
+namespace Mortgage.Products.MVP.UI.SeleniumHelpers
 {
     public class DriverUtility
     {
@@ -42,7 +42,8 @@ namespace Mortgage_Products_UI.SeleniumHelpers
 
         public static By GetElementLocationIdentifier(string locator, string identifierValue)
         {
-            //TODO Refactor
+            //TODO Refactor this mess
+            //Allow Driver methods to be accessed outside of DriverUtility class
             AssemblyName name = new AssemblyName("WebDriver");
             Assembly assembly = Assembly.Load(name);
             Type classType = assembly.GetTypes().FirstOrDefault(item => item.Name.ToLower().Contains("by"));

@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Mortgage_Products_MVP.Models
+namespace Mortgage.Products.MVP.API.Models
 {
     public class ApiResponse<TResult>
     {

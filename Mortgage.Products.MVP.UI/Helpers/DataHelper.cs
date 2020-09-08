@@ -1,9 +1,9 @@
-﻿using Mortgage_Products_MVP.Models;
-using Mortgage_Products_UI.Models;
+﻿using Mortgage.Products.MVP.API.Models;
+using Mortgage.Products.MVP.UI.Models;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 
-namespace Mortgage_Products_UI.Helpers
+namespace Mortgage.Products.MVP.UI.Helpers
 {
     public static class DataHelper
     {

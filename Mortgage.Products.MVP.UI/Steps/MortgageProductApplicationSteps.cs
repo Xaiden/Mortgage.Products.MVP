@@ -1,16 +1,16 @@
 ﻿using FluentAssertions;
 using Microsoft.Extensions.Configuration;
-using Mortgage_Products_MVP.Helpers;
-using Mortgage_Products_MVP.Models;
-using Mortgage_Products_UI.BusinessObjects;
-using Mortgage_Products_UI.Helpers;
-using Mortgage_Products_UI.Models;
-using Mortgage_Products_UI.SeleniumHelpers;
+using Mortgage.Products.MVP.API.Helpers;
+using Mortgage.Products.MVP.API.Models;
+using Mortgage.Products.MVP.UI.BusinessObjects;
+using Mortgage.Products.MVP.UI.Helpers;
+using Mortgage.Products.MVP.UI.Models;
+using Mortgage.Products.MVP.UI.SeleniumHelpers;
 using System.Collections.Generic;
 using TechTalk.SpecFlow;
 using Xunit.Abstractions;
 
-namespace Mortgage_Products_UI.Steps
+namespace Mortgage.Products.MVP.UI.Steps
 {
     [Binding]
     public sealed class MortgageProductApplicationSteps
@@ -23,12 +23,15 @@ namespace Mortgage_Products_UI.Steps
         {
             _scenarioContext = scenarioContext;
             _mortgageProductsPage = new MortgageProductsObjects(_scenarioContext);
+
+            //TODO add UI output logging to Step / Helpers
             _output = output;
         }
 
         [Given(@"the mortgage product information is retrieved via the API")]
         public void GivenTheMortgageProductInformationIsRetrievedViaTheAPI()
         {
+            //TODO ScenarioContext Helper Class to manage reads / adds
             _scenarioContext["apiResponse"] = RequestHelper.MakeApiGetRequest(_output, "products");
         }
 
@@ -36,8 +39,8 @@ namespace Mortgage_Products_UI.Steps
         [When(@"the application homepage is loaded")]
         public void GivenTheApplicationHomepageIsLoaded()
         {
+            //TODO refactor to Config helper class
             var config = new ConfigurationBuilder().AddJsonFile("appconfig.json").Build();
-            //ApplicationUrl
 
             DriverUtility.SetupBrowser("chrome",10);
             DriverUtility.NavigateToUrl(config["ApplicationUrl"]);      

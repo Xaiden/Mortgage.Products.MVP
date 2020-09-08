@@ -1,8 +1,8 @@
-﻿using Mortgage_Products_UI.SeleniumHelpers;
+﻿using Mortgage.Products.MVP.UI.SeleniumHelpers;
 using OpenQA.Selenium;
 using System.Collections.Generic;
 
-namespace Mortgage_Products_UI.Models
+namespace Mortgage.Products.MVP.UI.Models
 {
     public class Element
     {
